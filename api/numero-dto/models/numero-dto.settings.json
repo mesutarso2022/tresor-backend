@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "numero_dtos",
+  "info": {
+    "name": "numero-dto",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "numero": {
+      "type": "string"
+    },
+    "dtos": {
+      "via": "numero_dto",
+      "collection": "dto"
+    },
+    "annee": {
+      "type": "string"
+    }
+  }
+}
