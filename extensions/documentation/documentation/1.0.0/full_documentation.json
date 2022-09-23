@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "09/23/2022 2:25:53 AM"
+    "x-generation-date": "09/23/2022 3:03:45 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -2794,10 +2794,10 @@
             "type": "string"
           },
           "numero_od": {
-            "type": "integer"
+            "type": "string"
           },
           "numero_depense": {
-            "type": "integer"
+            "type": "string"
           },
           "objet_depense": {
             "type": "string"
@@ -2805,19 +2805,19 @@
           "libelle_type_beneficiaire": {
             "type": "string"
           },
+          "date_validation_od": {
+            "type": "string"
+          },
           "montant_od": {
-            "type": "number"
+            "type": "string"
+          },
+          "numero_dossier": {
+            "type": "string"
           },
           "devise": {
             "type": "string"
           },
-          "numero_dossier": {
-            "type": "integer"
-          },
-          "date_validation_od": {
-            "type": "string"
-          },
-          "date_reception_ordonnancement": {
+          "date_reception_ordonnancement_provisoire": {
             "type": "string"
           },
           "numero_dto": {
@@ -2839,61 +2839,10 @@
             "type": "string"
           },
           "numero_opi": {
-            "type": "integer"
+            "type": "string"
           },
           "date_transfert_bcc": {
             "type": "string"
-          },
-          "users_permissions_user": {
-            "required": [
-              "id",
-              "username",
-              "email"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "username": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmationToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
-              "dtos": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
           },
           "published_at": {
             "type": "string",
@@ -2904,10 +2853,10 @@
       "NewDto": {
         "properties": {
           "numero_od": {
-            "type": "integer"
+            "type": "string"
           },
           "numero_depense": {
-            "type": "integer"
+            "type": "string"
           },
           "objet_depense": {
             "type": "string"
@@ -2915,19 +2864,19 @@
           "libelle_type_beneficiaire": {
             "type": "string"
           },
+          "date_validation_od": {
+            "type": "string"
+          },
           "montant_od": {
-            "type": "number"
+            "type": "string"
+          },
+          "numero_dossier": {
+            "type": "string"
           },
           "devise": {
             "type": "string"
           },
-          "numero_dossier": {
-            "type": "integer"
-          },
-          "date_validation_od": {
-            "type": "string"
-          },
-          "date_reception_ordonnancement": {
+          "date_reception_ordonnancement_provisoire": {
             "type": "string"
           },
           "numero_dto": {
@@ -2949,12 +2898,9 @@
             "type": "string"
           },
           "numero_opi": {
-            "type": "integer"
-          },
-          "date_transfert_bcc": {
             "type": "string"
           },
-          "users_permissions_user": {
+          "date_transfert_bcc": {
             "type": "string"
           },
           "published_at": {
@@ -3068,12 +3014,6 @@
                 "role": {
                   "type": "string"
                 },
-                "dtos": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "created_by": {
                   "type": "string"
                 },
@@ -3186,82 +3126,6 @@
                 "type": "string"
               }
             }
-          },
-          "dtos": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "numero_od": {
-                  "type": "integer"
-                },
-                "numero_depense": {
-                  "type": "integer"
-                },
-                "objet_depense": {
-                  "type": "string"
-                },
-                "libelle_type_beneficiaire": {
-                  "type": "string"
-                },
-                "montant_od": {
-                  "type": "number"
-                },
-                "devise": {
-                  "type": "string"
-                },
-                "numero_dossier": {
-                  "type": "integer"
-                },
-                "date_validation_od": {
-                  "type": "string"
-                },
-                "date_reception_ordonnancement": {
-                  "type": "string"
-                },
-                "numero_dto": {
-                  "type": "string"
-                },
-                "date_premier_depart_cabinet": {
-                  "type": "string"
-                },
-                "date_deuxieme_depart_cabinet": {
-                  "type": "string"
-                },
-                "date_premier_retour_cabinet": {
-                  "type": "string"
-                },
-                "date_deuxieme_retour_cabinet": {
-                  "type": "string"
-                },
-                "code_traitement": {
-                  "type": "string"
-                },
-                "numero_opi": {
-                  "type": "integer"
-                },
-                "date_transfert_bcc": {
-                  "type": "string"
-                },
-                "users_permissions_user": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
           }
         }
       },
@@ -3303,12 +3167,6 @@
           },
           "role": {
             "type": "string"
-          },
-          "dtos": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           },
           "created_by": {
             "type": "string"
