@@ -13,10 +13,10 @@
   "pluginOptions": {},
   "attributes": {
     "numero_od": {
-      "type": "string"
+      "type": "biginteger"
     },
     "numero_depense": {
-      "type": "string"
+      "type": "biginteger"
     },
     "objet_depense": {
       "type": "string"
@@ -24,54 +24,49 @@
     "libelle_type_beneficiaire": {
       "type": "string"
     },
-    "date_validation_od": {
-      "type": "string"
-    },
     "montant_od": {
-      "type": "string"
-    },
-    "numero_dossier": {
-      "type": "string"
+      "type": "float"
     },
     "devise": {
       "type": "string"
     },
-    "date_reception_de_lordonannancement_provisoire": {
+    "numero_dossier": {
+      "type": "biginteger"
+    },
+    "date_validation_od": {
       "type": "string"
     },
-    "date_premier_depart_du_cabinet": {
+    "date_reception_ordonnancement": {
       "type": "string"
     },
-    "date_deuxieme_retour_du_cabinet": {
+    "numero_dto": {
       "type": "string"
     },
-    "date_premier_retour_du_cabinet": {
+    "date_premier_depart_cabinet": {
+      "type": "string"
+    },
+    "date_deuxieme_depart_cabinet": {
+      "type": "string"
+    },
+    "date_premier_retour_cabinet": {
+      "type": "string"
+    },
+    "date_deuxieme_retour_cabinet": {
       "type": "string"
     },
     "code_traitement": {
       "type": "string"
     },
     "numero_opi": {
+      "type": "biginteger"
+    },
+    "date_transfert_bcc": {
       "type": "string"
     },
-    "date_transfert_a_la_bcc": {
-      "type": "string"
-    },
-    "numero_dossier_signe_sans_opi": {
-      "type": "string"
-    },
-    "numero_dossier_signe_avec_opi": {
-      "type": "string"
-    },
-    "numero_dossier_ayant_ete_paye": {
-      "type": "string"
-    },
-    "numero_dto": {
-      "via": "dtos",
-      "model": "numero-dto"
-    },
-    "numero_du_dto": {
-      "type": "string"
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "dtos"
     }
   }
 }

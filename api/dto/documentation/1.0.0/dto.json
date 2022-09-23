@@ -523,10 +523,10 @@
             "type": "string"
           },
           "numero_od": {
-            "type": "string"
+            "type": "integer"
           },
           "numero_depense": {
-            "type": "string"
+            "type": "integer"
           },
           "objet_depense": {
             "type": "string"
@@ -534,57 +534,80 @@
           "libelle_type_beneficiaire": {
             "type": "string"
           },
-          "date_validation_od": {
-            "type": "string"
-          },
           "montant_od": {
-            "type": "string"
-          },
-          "numero_dossier": {
-            "type": "string"
+            "type": "number"
           },
           "devise": {
             "type": "string"
           },
-          "date_reception_de_lordonannancement_provisoire": {
+          "numero_dossier": {
+            "type": "integer"
+          },
+          "date_validation_od": {
             "type": "string"
           },
-          "date_premier_depart_du_cabinet": {
+          "date_reception_ordonnancement": {
             "type": "string"
           },
-          "date_deuxieme_retour_du_cabinet": {
+          "numero_dto": {
             "type": "string"
           },
-          "date_premier_retour_du_cabinet": {
+          "date_premier_depart_cabinet": {
+            "type": "string"
+          },
+          "date_deuxieme_depart_cabinet": {
+            "type": "string"
+          },
+          "date_premier_retour_cabinet": {
+            "type": "string"
+          },
+          "date_deuxieme_retour_cabinet": {
             "type": "string"
           },
           "code_traitement": {
             "type": "string"
           },
           "numero_opi": {
+            "type": "integer"
+          },
+          "date_transfert_bcc": {
             "type": "string"
           },
-          "date_transfert_a_la_bcc": {
-            "type": "string"
-          },
-          "numero_dossier_signe_sans_opi": {
-            "type": "string"
-          },
-          "numero_dossier_signe_avec_opi": {
-            "type": "string"
-          },
-          "numero_dossier_ayant_ete_paye": {
-            "type": "string"
-          },
-          "numero_dto": {
+          "users_permissions_user": {
             "required": [
-              "id"
+              "id",
+              "username",
+              "email"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "numero": {
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmationToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
                 "type": "string"
               },
               "dtos": {
@@ -593,12 +616,6 @@
                   "type": "string"
                 }
               },
-              "annee": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
               "created_by": {
                 "type": "string"
               },
@@ -606,9 +623,6 @@
                 "type": "string"
               }
             }
-          },
-          "numero_du_dto": {
-            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -619,10 +633,10 @@
       "NewDto": {
         "properties": {
           "numero_od": {
-            "type": "string"
+            "type": "integer"
           },
           "numero_depense": {
-            "type": "string"
+            "type": "integer"
           },
           "objet_depense": {
             "type": "string"
@@ -630,52 +644,46 @@
           "libelle_type_beneficiaire": {
             "type": "string"
           },
-          "date_validation_od": {
-            "type": "string"
-          },
           "montant_od": {
-            "type": "string"
-          },
-          "numero_dossier": {
-            "type": "string"
+            "type": "number"
           },
           "devise": {
             "type": "string"
           },
-          "date_reception_de_lordonannancement_provisoire": {
+          "numero_dossier": {
+            "type": "integer"
+          },
+          "date_validation_od": {
             "type": "string"
           },
-          "date_premier_depart_du_cabinet": {
+          "date_reception_ordonnancement": {
             "type": "string"
           },
-          "date_deuxieme_retour_du_cabinet": {
+          "numero_dto": {
             "type": "string"
           },
-          "date_premier_retour_du_cabinet": {
+          "date_premier_depart_cabinet": {
+            "type": "string"
+          },
+          "date_deuxieme_depart_cabinet": {
+            "type": "string"
+          },
+          "date_premier_retour_cabinet": {
+            "type": "string"
+          },
+          "date_deuxieme_retour_cabinet": {
             "type": "string"
           },
           "code_traitement": {
             "type": "string"
           },
           "numero_opi": {
+            "type": "integer"
+          },
+          "date_transfert_bcc": {
             "type": "string"
           },
-          "date_transfert_a_la_bcc": {
-            "type": "string"
-          },
-          "numero_dossier_signe_sans_opi": {
-            "type": "string"
-          },
-          "numero_dossier_signe_avec_opi": {
-            "type": "string"
-          },
-          "numero_dossier_ayant_ete_paye": {
-            "type": "string"
-          },
-          "numero_dto": {
-            "type": "string"
-          },
-          "numero_du_dto": {
+          "users_permissions_user": {
             "type": "string"
           },
           "published_at": {

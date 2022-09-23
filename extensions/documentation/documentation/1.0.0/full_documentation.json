@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "09/14/2022 5:19:28 PM"
+    "x-generation-date": "09/23/2022 2:25:53 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -541,530 +541,6 @@
         "summary": "",
         "tags": [
           "Dto"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      }
-    },
-    "/numero-dtos": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Numero-dto"
-        ],
-        "parameters": [
-          {
-            "name": "_limit",
-            "in": "query",
-            "required": false,
-            "description": "Maximum number of results possible",
-            "schema": {
-              "type": "integer"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_sort",
-            "in": "query",
-            "required": false,
-            "description": "Sort according to a specific field.",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_start",
-            "in": "query",
-            "required": false,
-            "description": "Skip a specific number of entries (especially useful for pagination)",
-            "schema": {
-              "type": "integer"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "=",
-            "in": "query",
-            "required": false,
-            "description": "Get entries that matches exactly your input",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_ne",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are not equals to something",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_lt",
-            "in": "query",
-            "required": false,
-            "description": "Get record that are lower than a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_lte",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are lower than or equal to a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_gt",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are greater than a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_gte",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are greater than  or equal a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_contains",
-            "in": "query",
-            "required": false,
-            "description": "Get records that contains a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_containss",
-            "in": "query",
-            "required": false,
-            "description": "Get records that contains (case sensitive) a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_in",
-            "in": "query",
-            "required": false,
-            "description": "Get records that matches any value in the array of values",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_nin",
-            "in": "query",
-            "required": false,
-            "description": "Get records that doesn't match any value in the array of values",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "deprecated": false
-          }
-        ]
-      },
-      "post": {
-        "deprecated": false,
-        "description": "Create a new record",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Numero-dto"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewNumero-dto"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/numero-dtos/count": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Numero-dto"
-        ],
-        "parameters": []
-      }
-    },
-    "/numero-dtos/{id}": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Numero-dto"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      },
-      "put": {
-        "deprecated": false,
-        "description": "Update a record",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Numero-dto"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewNumero-dto"
-              }
-            }
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      },
-      "delete": {
-        "deprecated": false,
-        "description": "Delete a record",
-        "responses": {
-          "200": {
-            "description": "deletes a single record based on the ID supplied",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "integer",
-                  "format": "int64"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Numero-dto"
         ],
         "parameters": [
           {
@@ -3318,10 +2794,10 @@
             "type": "string"
           },
           "numero_od": {
-            "type": "string"
+            "type": "integer"
           },
           "numero_depense": {
-            "type": "string"
+            "type": "integer"
           },
           "objet_depense": {
             "type": "string"
@@ -3329,57 +2805,80 @@
           "libelle_type_beneficiaire": {
             "type": "string"
           },
-          "date_validation_od": {
-            "type": "string"
-          },
           "montant_od": {
-            "type": "string"
-          },
-          "numero_dossier": {
-            "type": "string"
+            "type": "number"
           },
           "devise": {
             "type": "string"
           },
-          "date_reception_de_lordonannancement_provisoire": {
+          "numero_dossier": {
+            "type": "integer"
+          },
+          "date_validation_od": {
             "type": "string"
           },
-          "date_premier_depart_du_cabinet": {
+          "date_reception_ordonnancement": {
             "type": "string"
           },
-          "date_deuxieme_retour_du_cabinet": {
+          "numero_dto": {
             "type": "string"
           },
-          "date_premier_retour_du_cabinet": {
+          "date_premier_depart_cabinet": {
+            "type": "string"
+          },
+          "date_deuxieme_depart_cabinet": {
+            "type": "string"
+          },
+          "date_premier_retour_cabinet": {
+            "type": "string"
+          },
+          "date_deuxieme_retour_cabinet": {
             "type": "string"
           },
           "code_traitement": {
             "type": "string"
           },
           "numero_opi": {
+            "type": "integer"
+          },
+          "date_transfert_bcc": {
             "type": "string"
           },
-          "date_transfert_a_la_bcc": {
-            "type": "string"
-          },
-          "numero_dossier_signe_sans_opi": {
-            "type": "string"
-          },
-          "numero_dossier_signe_avec_opi": {
-            "type": "string"
-          },
-          "numero_dossier_ayant_ete_paye": {
-            "type": "string"
-          },
-          "numero_dto": {
+          "users_permissions_user": {
             "required": [
-              "id"
+              "id",
+              "username",
+              "email"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "numero": {
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmationToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
                 "type": "string"
               },
               "dtos": {
@@ -3388,12 +2887,6 @@
                   "type": "string"
                 }
               },
-              "annee": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
               "created_by": {
                 "type": "string"
               },
@@ -3401,9 +2894,6 @@
                 "type": "string"
               }
             }
-          },
-          "numero_du_dto": {
-            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -3414,10 +2904,10 @@
       "NewDto": {
         "properties": {
           "numero_od": {
-            "type": "string"
+            "type": "integer"
           },
           "numero_depense": {
-            "type": "string"
+            "type": "integer"
           },
           "objet_depense": {
             "type": "string"
@@ -3425,180 +2915,46 @@
           "libelle_type_beneficiaire": {
             "type": "string"
           },
-          "date_validation_od": {
-            "type": "string"
-          },
           "montant_od": {
-            "type": "string"
-          },
-          "numero_dossier": {
-            "type": "string"
+            "type": "number"
           },
           "devise": {
             "type": "string"
           },
-          "date_reception_de_lordonannancement_provisoire": {
+          "numero_dossier": {
+            "type": "integer"
+          },
+          "date_validation_od": {
             "type": "string"
           },
-          "date_premier_depart_du_cabinet": {
+          "date_reception_ordonnancement": {
             "type": "string"
           },
-          "date_deuxieme_retour_du_cabinet": {
+          "numero_dto": {
             "type": "string"
           },
-          "date_premier_retour_du_cabinet": {
+          "date_premier_depart_cabinet": {
+            "type": "string"
+          },
+          "date_deuxieme_depart_cabinet": {
+            "type": "string"
+          },
+          "date_premier_retour_cabinet": {
+            "type": "string"
+          },
+          "date_deuxieme_retour_cabinet": {
             "type": "string"
           },
           "code_traitement": {
             "type": "string"
           },
           "numero_opi": {
+            "type": "integer"
+          },
+          "date_transfert_bcc": {
             "type": "string"
           },
-          "date_transfert_a_la_bcc": {
-            "type": "string"
-          },
-          "numero_dossier_signe_sans_opi": {
-            "type": "string"
-          },
-          "numero_dossier_signe_avec_opi": {
-            "type": "string"
-          },
-          "numero_dossier_ayant_ete_paye": {
-            "type": "string"
-          },
-          "numero_dto": {
-            "type": "string"
-          },
-          "numero_du_dto": {
-            "type": "string"
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "created_by": {
-            "type": "string"
-          },
-          "updated_by": {
-            "type": "string"
-          }
-        }
-      },
-      "Numero-dto": {
-        "required": [
-          "id"
-        ],
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "numero": {
-            "type": "string"
-          },
-          "dtos": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "numero_od": {
-                  "type": "string"
-                },
-                "numero_depense": {
-                  "type": "string"
-                },
-                "objet_depense": {
-                  "type": "string"
-                },
-                "libelle_type_beneficiaire": {
-                  "type": "string"
-                },
-                "date_validation_od": {
-                  "type": "string"
-                },
-                "montant_od": {
-                  "type": "string"
-                },
-                "numero_dossier": {
-                  "type": "string"
-                },
-                "devise": {
-                  "type": "string"
-                },
-                "date_reception_de_lordonannancement_provisoire": {
-                  "type": "string"
-                },
-                "date_premier_depart_du_cabinet": {
-                  "type": "string"
-                },
-                "date_deuxieme_retour_du_cabinet": {
-                  "type": "string"
-                },
-                "date_premier_retour_du_cabinet": {
-                  "type": "string"
-                },
-                "code_traitement": {
-                  "type": "string"
-                },
-                "numero_opi": {
-                  "type": "string"
-                },
-                "date_transfert_a_la_bcc": {
-                  "type": "string"
-                },
-                "numero_dossier_signe_sans_opi": {
-                  "type": "string"
-                },
-                "numero_dossier_signe_avec_opi": {
-                  "type": "string"
-                },
-                "numero_dossier_ayant_ete_paye": {
-                  "type": "string"
-                },
-                "numero_dto": {
-                  "type": "string"
-                },
-                "numero_du_dto": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "annee": {
-            "type": "string"
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
-          }
-        }
-      },
-      "NewNumero-dto": {
-        "properties": {
-          "numero": {
-            "type": "string"
-          },
-          "dtos": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "annee": {
+          "users_permissions_user": {
             "type": "string"
           },
           "published_at": {
@@ -3712,6 +3068,12 @@
                 "role": {
                   "type": "string"
                 },
+                "dtos": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -3824,6 +3186,82 @@
                 "type": "string"
               }
             }
+          },
+          "dtos": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "numero_od": {
+                  "type": "integer"
+                },
+                "numero_depense": {
+                  "type": "integer"
+                },
+                "objet_depense": {
+                  "type": "string"
+                },
+                "libelle_type_beneficiaire": {
+                  "type": "string"
+                },
+                "montant_od": {
+                  "type": "number"
+                },
+                "devise": {
+                  "type": "string"
+                },
+                "numero_dossier": {
+                  "type": "integer"
+                },
+                "date_validation_od": {
+                  "type": "string"
+                },
+                "date_reception_ordonnancement": {
+                  "type": "string"
+                },
+                "numero_dto": {
+                  "type": "string"
+                },
+                "date_premier_depart_cabinet": {
+                  "type": "string"
+                },
+                "date_deuxieme_depart_cabinet": {
+                  "type": "string"
+                },
+                "date_premier_retour_cabinet": {
+                  "type": "string"
+                },
+                "date_deuxieme_retour_cabinet": {
+                  "type": "string"
+                },
+                "code_traitement": {
+                  "type": "string"
+                },
+                "numero_opi": {
+                  "type": "integer"
+                },
+                "date_transfert_bcc": {
+                  "type": "string"
+                },
+                "users_permissions_user": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -3865,6 +3303,12 @@
           },
           "role": {
             "type": "string"
+          },
+          "dtos": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "created_by": {
             "type": "string"
