@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "09/23/2022 3:03:45 AM"
+    "x-generation-date": "09/23/2022 3:13:37 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -45,6 +45,1028 @@
     }
   ],
   "paths": {
+    "/depenses": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Depense"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Depense"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "post": {
+        "deprecated": false,
+        "description": "Create a new record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Depense"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Depense"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewDepense"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/depenses/count": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "count": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Depense"
+        ],
+        "parameters": []
+      }
+    },
+    "/depenses/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Depense"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Depense"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Depense"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Depense"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewDepense"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a record",
+        "responses": {
+          "200": {
+            "description": "deletes a single record based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Depense"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/dotations": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Dotation"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Dotation"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "post": {
+        "deprecated": false,
+        "description": "Create a new record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Dotation"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Dotation"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewDotation"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/dotations/count": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "count": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Dotation"
+        ],
+        "parameters": []
+      }
+    },
+    "/dotations/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Dotation"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Dotation"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Dotation"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Dotation"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewDotation"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a record",
+        "responses": {
+          "200": {
+            "description": "deletes a single record based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Dotation"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
     "/dtos": {
       "get": {
         "deprecated": false,
@@ -541,6 +1563,517 @@
         "summary": "",
         "tags": [
           "Dto"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/jocs": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Joc"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Joc"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "post": {
+        "deprecated": false,
+        "description": "Create a new record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Joc"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Joc"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewJoc"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/jocs/count": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "count": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Joc"
+        ],
+        "parameters": []
+      }
+    },
+    "/jocs/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Joc"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Joc"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Joc"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Joc"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewJoc"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a record",
+        "responses": {
+          "200": {
+            "description": "deletes a single record based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Joc"
         ],
         "parameters": [
           {
@@ -2785,6 +4318,686 @@
   },
   "components": {
     "schemas": {
+      "Depense": {
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "numero_dotation": {
+            "type": "string"
+          },
+          "numero_dossier": {
+            "type": "string"
+          },
+          "date_dossier": {
+            "type": "string"
+          },
+          "numero_bde": {
+            "type": "string"
+          },
+          "montant_prevu": {
+            "type": "string"
+          },
+          "taux_devise": {
+            "type": "string"
+          },
+          "nom_devise": {
+            "type": "string"
+          },
+          "sigle_devise": {
+            "type": "string"
+          },
+          "montant_dossier_fc": {
+            "type": "string"
+          },
+          "acte_generateur": {
+            "type": "string"
+          },
+          "numero_depense": {
+            "type": "string"
+          },
+          "date_saisie_depense": {
+            "type": "string"
+          },
+          "numero_dotation_depense": {
+            "type": "string"
+          },
+          "objet_depense": {
+            "type": "string"
+          },
+          "montant_prevu_depense": {
+            "type": "string"
+          },
+          "montant_depense_fc": {
+            "type": "string"
+          },
+          "montant_cumul_paye": {
+            "type": "string"
+          },
+          "nom_beneficiaire": {
+            "type": "string"
+          },
+          "numero_liquidation": {
+            "type": "string"
+          },
+          "date_validation_liquidation": {
+            "type": "string"
+          },
+          "montant_liquidation": {
+            "type": "string"
+          },
+          "montant_liquidation_fc": {
+            "type": "string"
+          },
+          "numero_od": {
+            "type": "string"
+          },
+          "date_visa_ministre": {
+            "type": "string"
+          },
+          "date_validation_od": {
+            "type": "string"
+          },
+          "montant_od": {
+            "type": "string"
+          },
+          "montant_od_fc": {
+            "type": "string"
+          },
+          "numero_paiement": {
+            "type": "string"
+          },
+          "montant_paiement": {
+            "type": "string"
+          },
+          "montant_paiement_fc": {
+            "type": "string"
+          },
+          "libelle_etat_paiement": {
+            "type": "string"
+          },
+          "date_transfert_bcc": {
+            "type": "string"
+          },
+          "date_accuse_bcc": {
+            "type": "string"
+          },
+          "code_dotation": {
+            "type": "string"
+          },
+          "libelle_dotation": {
+            "type": "string"
+          },
+          "exercice_dotation": {
+            "type": "string"
+          },
+          "montant_dotation": {
+            "type": "string"
+          },
+          "montant_engage": {
+            "type": "string"
+          },
+          "montant_liquide": {
+            "type": "string"
+          },
+          "montant_ordonnance": {
+            "type": "string"
+          },
+          "montant_paye": {
+            "type": "string"
+          },
+          "nom_chapitre": {
+            "type": "string"
+          },
+          "nom_section": {
+            "type": "string"
+          },
+          "libelle_nature_economique": {
+            "type": "string"
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "NewDepense": {
+        "properties": {
+          "numero_dotation": {
+            "type": "string"
+          },
+          "numero_dossier": {
+            "type": "string"
+          },
+          "date_dossier": {
+            "type": "string"
+          },
+          "numero_bde": {
+            "type": "string"
+          },
+          "montant_prevu": {
+            "type": "string"
+          },
+          "taux_devise": {
+            "type": "string"
+          },
+          "nom_devise": {
+            "type": "string"
+          },
+          "sigle_devise": {
+            "type": "string"
+          },
+          "montant_dossier_fc": {
+            "type": "string"
+          },
+          "acte_generateur": {
+            "type": "string"
+          },
+          "numero_depense": {
+            "type": "string"
+          },
+          "date_saisie_depense": {
+            "type": "string"
+          },
+          "numero_dotation_depense": {
+            "type": "string"
+          },
+          "objet_depense": {
+            "type": "string"
+          },
+          "montant_prevu_depense": {
+            "type": "string"
+          },
+          "montant_depense_fc": {
+            "type": "string"
+          },
+          "montant_cumul_paye": {
+            "type": "string"
+          },
+          "nom_beneficiaire": {
+            "type": "string"
+          },
+          "numero_liquidation": {
+            "type": "string"
+          },
+          "date_validation_liquidation": {
+            "type": "string"
+          },
+          "montant_liquidation": {
+            "type": "string"
+          },
+          "montant_liquidation_fc": {
+            "type": "string"
+          },
+          "numero_od": {
+            "type": "string"
+          },
+          "date_visa_ministre": {
+            "type": "string"
+          },
+          "date_validation_od": {
+            "type": "string"
+          },
+          "montant_od": {
+            "type": "string"
+          },
+          "montant_od_fc": {
+            "type": "string"
+          },
+          "numero_paiement": {
+            "type": "string"
+          },
+          "montant_paiement": {
+            "type": "string"
+          },
+          "montant_paiement_fc": {
+            "type": "string"
+          },
+          "libelle_etat_paiement": {
+            "type": "string"
+          },
+          "date_transfert_bcc": {
+            "type": "string"
+          },
+          "date_accuse_bcc": {
+            "type": "string"
+          },
+          "code_dotation": {
+            "type": "string"
+          },
+          "libelle_dotation": {
+            "type": "string"
+          },
+          "exercice_dotation": {
+            "type": "string"
+          },
+          "montant_dotation": {
+            "type": "string"
+          },
+          "montant_engage": {
+            "type": "string"
+          },
+          "montant_liquide": {
+            "type": "string"
+          },
+          "montant_ordonnance": {
+            "type": "string"
+          },
+          "montant_paye": {
+            "type": "string"
+          },
+          "nom_chapitre": {
+            "type": "string"
+          },
+          "nom_section": {
+            "type": "string"
+          },
+          "libelle_nature_economique": {
+            "type": "string"
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
+          }
+        }
+      },
+      "Dotation": {
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "numero_dotation": {
+            "type": "string"
+          },
+          "code_dotation": {
+            "type": "string"
+          },
+          "libelle_dotation": {
+            "type": "string"
+          },
+          "exercice": {
+            "type": "string"
+          },
+          "sous_fonction": {
+            "type": "string"
+          },
+          "chapitre": {
+            "type": "string"
+          },
+          "Nature": {
+            "type": "string"
+          },
+          "numero_projet": {
+            "type": "string"
+          },
+          "montant_vote": {
+            "type": "string"
+          },
+          "montant_dotation": {
+            "type": "string"
+          },
+          "montant_engage": {
+            "type": "string"
+          },
+          "montant_liquide": {
+            "type": "string"
+          },
+          "montant_ordonnance": {
+            "type": "string"
+          },
+          "montant_paye": {
+            "type": "string"
+          },
+          "montant_debite": {
+            "type": "string"
+          },
+          "montant_reservation": {
+            "type": "string"
+          },
+          "etat_virement": {
+            "type": "string"
+          },
+          "max_trimestre_1": {
+            "type": "string"
+          },
+          "max_trimestre_2": {
+            "type": "string"
+          },
+          "max_trimestre_3": {
+            "type": "string"
+          },
+          "max_trimestre_4": {
+            "type": "string"
+          },
+          "cumul_trimestre_1": {
+            "type": "string"
+          },
+          "cumul_trimestre_2": {
+            "type": "string"
+          },
+          "cumul_trimestre_3": {
+            "type": "string"
+          },
+          "cumul_trimestre_4": {
+            "type": "string"
+          },
+          "effectif": {
+            "type": "string"
+          },
+          "financement": {
+            "type": "string"
+          },
+          "specificite": {
+            "type": "string"
+          },
+          "localisation": {
+            "type": "string"
+          },
+          "nom_chapitre": {
+            "type": "string"
+          },
+          "code_section": {
+            "type": "string"
+          },
+          "nom_section": {
+            "type": "string"
+          },
+          "nom_ministere": {
+            "type": "string"
+          },
+          "libelle_article": {
+            "type": "string"
+          },
+          "code_ministere": {
+            "type": "string"
+          },
+          "libelle_localisation": {
+            "type": "string"
+          },
+          "code_territoire_ville": {
+            "type": "string"
+          },
+          "libelle_territoire_ville": {
+            "type": "string"
+          },
+          "libelle_source_financement": {
+            "type": "string"
+          },
+          "code_titre": {
+            "type": "string"
+          },
+          "libelle_titre": {
+            "type": "string"
+          },
+          "libelle_sous_fonction": {
+            "type": "string"
+          },
+          "code_pag": {
+            "type": "string"
+          },
+          "code_grande_fonction": {
+            "type": "string"
+          },
+          "libelle_grande_fonction": {
+            "type": "string"
+          },
+          "libelle_specificite": {
+            "type": "string"
+          },
+          "code_province": {
+            "type": "string"
+          },
+          "nom_province": {
+            "type": "string"
+          },
+          "code_article": {
+            "type": "string"
+          },
+          "code_nature": {
+            "type": "string"
+          },
+          "libelle_nature": {
+            "type": "string"
+          },
+          "programme": {
+            "type": "string"
+          },
+          "action": {
+            "type": "string"
+          },
+          "nom_fonction": {
+            "type": "string"
+          },
+          "code_fonction": {
+            "type": "string"
+          },
+          "code_forme_budget": {
+            "type": "string"
+          },
+          "sous_nature": {
+            "type": "string"
+          },
+          "libelle_sous_nature": {
+            "type": "string"
+          },
+          "code_projet": {
+            "type": "string"
+          },
+          "nom_projet": {
+            "type": "string"
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "NewDotation": {
+        "properties": {
+          "numero_dotation": {
+            "type": "string"
+          },
+          "code_dotation": {
+            "type": "string"
+          },
+          "libelle_dotation": {
+            "type": "string"
+          },
+          "exercice": {
+            "type": "string"
+          },
+          "sous_fonction": {
+            "type": "string"
+          },
+          "chapitre": {
+            "type": "string"
+          },
+          "Nature": {
+            "type": "string"
+          },
+          "numero_projet": {
+            "type": "string"
+          },
+          "montant_vote": {
+            "type": "string"
+          },
+          "montant_dotation": {
+            "type": "string"
+          },
+          "montant_engage": {
+            "type": "string"
+          },
+          "montant_liquide": {
+            "type": "string"
+          },
+          "montant_ordonnance": {
+            "type": "string"
+          },
+          "montant_paye": {
+            "type": "string"
+          },
+          "montant_debite": {
+            "type": "string"
+          },
+          "montant_reservation": {
+            "type": "string"
+          },
+          "etat_virement": {
+            "type": "string"
+          },
+          "max_trimestre_1": {
+            "type": "string"
+          },
+          "max_trimestre_2": {
+            "type": "string"
+          },
+          "max_trimestre_3": {
+            "type": "string"
+          },
+          "max_trimestre_4": {
+            "type": "string"
+          },
+          "cumul_trimestre_1": {
+            "type": "string"
+          },
+          "cumul_trimestre_2": {
+            "type": "string"
+          },
+          "cumul_trimestre_3": {
+            "type": "string"
+          },
+          "cumul_trimestre_4": {
+            "type": "string"
+          },
+          "effectif": {
+            "type": "string"
+          },
+          "financement": {
+            "type": "string"
+          },
+          "specificite": {
+            "type": "string"
+          },
+          "localisation": {
+            "type": "string"
+          },
+          "nom_chapitre": {
+            "type": "string"
+          },
+          "code_section": {
+            "type": "string"
+          },
+          "nom_section": {
+            "type": "string"
+          },
+          "nom_ministere": {
+            "type": "string"
+          },
+          "libelle_article": {
+            "type": "string"
+          },
+          "code_ministere": {
+            "type": "string"
+          },
+          "libelle_localisation": {
+            "type": "string"
+          },
+          "code_territoire_ville": {
+            "type": "string"
+          },
+          "libelle_territoire_ville": {
+            "type": "string"
+          },
+          "libelle_source_financement": {
+            "type": "string"
+          },
+          "code_titre": {
+            "type": "string"
+          },
+          "libelle_titre": {
+            "type": "string"
+          },
+          "libelle_sous_fonction": {
+            "type": "string"
+          },
+          "code_pag": {
+            "type": "string"
+          },
+          "code_grande_fonction": {
+            "type": "string"
+          },
+          "libelle_grande_fonction": {
+            "type": "string"
+          },
+          "libelle_specificite": {
+            "type": "string"
+          },
+          "code_province": {
+            "type": "string"
+          },
+          "nom_province": {
+            "type": "string"
+          },
+          "code_article": {
+            "type": "string"
+          },
+          "code_nature": {
+            "type": "string"
+          },
+          "libelle_nature": {
+            "type": "string"
+          },
+          "programme": {
+            "type": "string"
+          },
+          "action": {
+            "type": "string"
+          },
+          "nom_fonction": {
+            "type": "string"
+          },
+          "code_fonction": {
+            "type": "string"
+          },
+          "code_forme_budget": {
+            "type": "string"
+          },
+          "sous_nature": {
+            "type": "string"
+          },
+          "libelle_sous_nature": {
+            "type": "string"
+          },
+          "code_projet": {
+            "type": "string"
+          },
+          "nom_projet": {
+            "type": "string"
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
+          }
+        }
+      },
       "Dto": {
         "required": [
           "id"
@@ -2901,6 +5114,142 @@
             "type": "string"
           },
           "date_transfert_bcc": {
+            "type": "string"
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
+          }
+        }
+      },
+      "Joc": {
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "numero_joc": {
+            "type": "string"
+          },
+          "lieu_op": {
+            "type": "string"
+          },
+          "numero_compte": {
+            "type": "string"
+          },
+          "date_op": {
+            "type": "string"
+          },
+          "nature_op": {
+            "type": "string"
+          },
+          "libelle_op": {
+            "type": "string"
+          },
+          "nom_beneficiaire": {
+            "type": "string"
+          },
+          "reference_document": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "motif": {
+            "type": "string"
+          },
+          "montant_debit": {
+            "type": "string"
+          },
+          "montant_credit": {
+            "type": "string"
+          },
+          "date_integration_dto": {
+            "type": "string"
+          },
+          "date_journee_joc": {
+            "type": "string"
+          },
+          "integrateur_joc": {
+            "type": "string"
+          },
+          "date_integration_routine": {
+            "type": "string"
+          },
+          "statut_integration_dto": {
+            "type": "string"
+          },
+          "code_insertion_compta_dto": {
+            "type": "string"
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "NewJoc": {
+        "properties": {
+          "numero_joc": {
+            "type": "string"
+          },
+          "lieu_op": {
+            "type": "string"
+          },
+          "numero_compte": {
+            "type": "string"
+          },
+          "date_op": {
+            "type": "string"
+          },
+          "nature_op": {
+            "type": "string"
+          },
+          "libelle_op": {
+            "type": "string"
+          },
+          "nom_beneficiaire": {
+            "type": "string"
+          },
+          "reference_document": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "motif": {
+            "type": "string"
+          },
+          "montant_debit": {
+            "type": "string"
+          },
+          "montant_credit": {
+            "type": "string"
+          },
+          "date_integration_dto": {
+            "type": "string"
+          },
+          "date_journee_joc": {
+            "type": "string"
+          },
+          "integrateur_joc": {
+            "type": "string"
+          },
+          "date_integration_routine": {
+            "type": "string"
+          },
+          "statut_integration_dto": {
+            "type": "string"
+          },
+          "code_insertion_compta_dto": {
             "type": "string"
           },
           "published_at": {
@@ -3202,7 +5551,16 @@
   },
   "tags": [
     {
+      "name": "Depense"
+    },
+    {
+      "name": "Dotation"
+    },
+    {
       "name": "Dto"
+    },
+    {
+      "name": "Joc"
     },
     {
       "name": "Email - Email"
