@@ -30,12 +30,13 @@
     "montant_od": {
       "type": "string"
     },
-    "numero_dossier": {
-      "type": "string"
-    },
     "devise": {
       "type": "string"
     },
+    "numero_dossier": {
+      "type": "string"
+    },
+    
     "date_reception_ordonnancement_provisoire": {
       "type": "string"
     },
