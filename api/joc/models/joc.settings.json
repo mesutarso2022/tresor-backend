@@ -1,0 +1,69 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jocs",
+  "info": {
+    "name": "joc"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "numero_joc": {
+      "type": "string"
+    },
+    "lieu_op": {
+      "type": "string"
+    },
+    "numero_compte": {
+      "type": "string"
+    },
+    "date_op": {
+      "type": "string"
+    },
+    "nature_op": {
+      "type": "string"
+    },
+    "libelle_op": {
+      "type": "string"
+    },
+    "nom_beneficiaire": {
+      "type": "string"
+    },
+    "reference_document": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "motif": {
+      "type": "string"
+    },
+    "montant_debit": {
+      "type": "string"
+    },
+    "montant_credit": {
+      "type": "string"
+    },
+    "date_integration_dto": {
+      "type": "string"
+    },
+    "date_journee_joc": {
+      "type": "string"
+    },
+    "integrateur_joc": {
+      "type": "string"
+    },
+    "date_integration_routine": {
+      "type": "string"
+    },
+    "statut_integration_dto": {
+      "type": "string"
+    },
+    "code_insertion_compta_dto": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,816 @@
+{
+  "paths": {
+    "/depenses": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Depense"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Depense"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "post": {
+        "deprecated": false,
+        "description": "Create a new record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Depense"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Depense"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewDepense"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/depenses/count": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "count": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Depense"
+        ],
+        "parameters": []
+      }
+    },
+    "/depenses/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Depense"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Depense"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Depense"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Depense"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewDepense"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a record",
+        "responses": {
+          "200": {
+            "description": "deletes a single record based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Depense"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Depense": {
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "numero_dotation": {
+            "type": "string"
+          },
+          "numero_dossier": {
+            "type": "string"
+          },
+          "date_dossier": {
+            "type": "string"
+          },
+          "numero_bde": {
+            "type": "string"
+          },
+          "montant_prevu": {
+            "type": "string"
+          },
+          "taux_devise": {
+            "type": "string"
+          },
+          "nom_devise": {
+            "type": "string"
+          },
+          "sigle_devise": {
+            "type": "string"
+          },
+          "montant_dossier_fc": {
+            "type": "string"
+          },
+          "acte_generateur": {
+            "type": "string"
+          },
+          "numero_depense": {
+            "type": "string"
+          },
+          "date_saisie_depense": {
+            "type": "string"
+          },
+          "numero_dotation_depense": {
+            "type": "string"
+          },
+          "objet_depense": {
+            "type": "string"
+          },
+          "montant_prevu_depense": {
+            "type": "string"
+          },
+          "montant_depense_fc": {
+            "type": "string"
+          },
+          "montant_cumul_paye": {
+            "type": "string"
+          },
+          "nom_beneficiaire": {
+            "type": "string"
+          },
+          "numero_liquidation": {
+            "type": "string"
+          },
+          "date_validation_liquidation": {
+            "type": "string"
+          },
+          "montant_liquidation": {
+            "type": "string"
+          },
+          "montant_liquidation_fc": {
+            "type": "string"
+          },
+          "numero_od": {
+            "type": "string"
+          },
+          "date_visa_ministre": {
+            "type": "string"
+          },
+          "date_validation_od": {
+            "type": "string"
+          },
+          "montant_od": {
+            "type": "string"
+          },
+          "montant_od_fc": {
+            "type": "string"
+          },
+          "numero_paiement": {
+            "type": "string"
+          },
+          "montant_paiement": {
+            "type": "string"
+          },
+          "montant_paiement_fc": {
+            "type": "string"
+          },
+          "libelle_etat_paiement": {
+            "type": "string"
+          },
+          "date_transfert_bcc": {
+            "type": "string"
+          },
+          "date_accuse_bcc": {
+            "type": "string"
+          },
+          "code_dotation": {
+            "type": "string"
+          },
+          "libelle_dotation": {
+            "type": "string"
+          },
+          "exercice_dotation": {
+            "type": "string"
+          },
+          "montant_dotation": {
+            "type": "string"
+          },
+          "montant_engage": {
+            "type": "string"
+          },
+          "montant_liquide": {
+            "type": "string"
+          },
+          "montant_ordonnance": {
+            "type": "string"
+          },
+          "montant_paye": {
+            "type": "string"
+          },
+          "nom_chapitre": {
+            "type": "string"
+          },
+          "nom_section": {
+            "type": "string"
+          },
+          "libelle_nature_economique": {
+            "type": "string"
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "NewDepense": {
+        "properties": {
+          "numero_dotation": {
+            "type": "string"
+          },
+          "numero_dossier": {
+            "type": "string"
+          },
+          "date_dossier": {
+            "type": "string"
+          },
+          "numero_bde": {
+            "type": "string"
+          },
+          "montant_prevu": {
+            "type": "string"
+          },
+          "taux_devise": {
+            "type": "string"
+          },
+          "nom_devise": {
+            "type": "string"
+          },
+          "sigle_devise": {
+            "type": "string"
+          },
+          "montant_dossier_fc": {
+            "type": "string"
+          },
+          "acte_generateur": {
+            "type": "string"
+          },
+          "numero_depense": {
+            "type": "string"
+          },
+          "date_saisie_depense": {
+            "type": "string"
+          },
+          "numero_dotation_depense": {
+            "type": "string"
+          },
+          "objet_depense": {
+            "type": "string"
+          },
+          "montant_prevu_depense": {
+            "type": "string"
+          },
+          "montant_depense_fc": {
+            "type": "string"
+          },
+          "montant_cumul_paye": {
+            "type": "string"
+          },
+          "nom_beneficiaire": {
+            "type": "string"
+          },
+          "numero_liquidation": {
+            "type": "string"
+          },
+          "date_validation_liquidation": {
+            "type": "string"
+          },
+          "montant_liquidation": {
+            "type": "string"
+          },
+          "montant_liquidation_fc": {
+            "type": "string"
+          },
+          "numero_od": {
+            "type": "string"
+          },
+          "date_visa_ministre": {
+            "type": "string"
+          },
+          "date_validation_od": {
+            "type": "string"
+          },
+          "montant_od": {
+            "type": "string"
+          },
+          "montant_od_fc": {
+            "type": "string"
+          },
+          "numero_paiement": {
+            "type": "string"
+          },
+          "montant_paiement": {
+            "type": "string"
+          },
+          "montant_paiement_fc": {
+            "type": "string"
+          },
+          "libelle_etat_paiement": {
+            "type": "string"
+          },
+          "date_transfert_bcc": {
+            "type": "string"
+          },
+          "date_accuse_bcc": {
+            "type": "string"
+          },
+          "code_dotation": {
+            "type": "string"
+          },
+          "libelle_dotation": {
+            "type": "string"
+          },
+          "exercice_dotation": {
+            "type": "string"
+          },
+          "montant_dotation": {
+            "type": "string"
+          },
+          "montant_engage": {
+            "type": "string"
+          },
+          "montant_liquide": {
+            "type": "string"
+          },
+          "montant_ordonnance": {
+            "type": "string"
+          },
+          "montant_paye": {
+            "type": "string"
+          },
+          "nom_chapitre": {
+            "type": "string"
+          },
+          "nom_section": {
+            "type": "string"
+          },
+          "libelle_nature_economique": {
+            "type": "string"
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Depense"
+    }
+  ]
+}

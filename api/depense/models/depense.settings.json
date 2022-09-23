@@ -1,0 +1,148 @@
+{
+  "kind": "collectionType",
+  "collectionName": "depenses",
+  "info": {
+    "name": "depense",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "numero_dotation": {
+      "type": "string"
+    },
+    "numero_dossier": {
+      "type": "string"
+    },
+    "date_dossier": {
+      "type": "string"
+    },
+    "numero_bde": {
+      "type": "string"
+    },
+    "montant_prevu": {
+      "type": "string"
+    },
+    "taux_devise": {
+      "type": "string"
+    },
+    "nom_devise": {
+      "type": "string"
+    },
+    "sigle_devise": {
+      "type": "string"
+    },
+    "montant_dossier_fc": {
+      "type": "string"
+    },
+    "acte_generateur": {
+      "type": "string"
+    },
+    "numero_depense": {
+      "type": "string"
+    },
+    "date_saisie_depense": {
+      "type": "string"
+    },
+    "numero_dotation_depense": {
+      "type": "string"
+    },
+    "objet_depense": {
+      "type": "string"
+    },
+    "montant_prevu_depense": {
+      "type": "string"
+    },
+    "montant_depense_fc": {
+      "type": "string"
+    },
+    "montant_cumul_paye": {
+      "type": "string"
+    },
+    "nom_beneficiaire": {
+      "type": "string"
+    },
+    "numero_liquidation": {
+      "type": "string"
+    },
+    "date_validation_liquidation": {
+      "type": "string"
+    },
+    "montant_liquidation": {
+      "type": "string"
+    },
+    "montant_liquidation_fc": {
+      "type": "string"
+    },
+    "numero_od": {
+      "type": "string"
+    },
+    "date_visa_ministre": {
+      "type": "string"
+    },
+    "date_validation_od": {
+      "type": "string"
+    },
+    "montant_od": {
+      "type": "string"
+    },
+    "montant_od_fc": {
+      "type": "string"
+    },
+    "numero_paiement": {
+      "type": "string"
+    },
+    "montant_paiement": {
+      "type": "string"
+    },
+    "montant_paiement_fc": {
+      "type": "string"
+    },
+    "libelle_etat_paiement": {
+      "type": "string"
+    },
+    "date_transfert_bcc": {
+      "type": "string"
+    },
+    "date_accuse_bcc": {
+      "type": "string"
+    },
+    "code_dotation": {
+      "type": "string"
+    },
+    "libelle_dotation": {
+      "type": "string"
+    },
+    "exercice_dotation": {
+      "type": "string"
+    },
+    "montant_dotation": {
+      "type": "string"
+    },
+    "montant_engage": {
+      "type": "string"
+    },
+    "montant_liquide": {
+      "type": "string"
+    },
+    "montant_ordonnance": {
+      "type": "string"
+    },
+    "montant_paye": {
+      "type": "string"
+    },
+    "nom_chapitre": {
+      "type": "string"
+    },
+    "nom_section": {
+      "type": "string"
+    },
+    "libelle_nature_economique": {
+      "type": "string"
+    }
+  }
+}
