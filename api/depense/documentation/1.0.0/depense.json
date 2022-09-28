@@ -653,10 +653,6 @@
           },
           "libelle_nature_economique": {
             "type": "string"
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
           }
         }
       },
@@ -793,10 +789,6 @@
           },
           "libelle_nature_economique": {
             "type": "string"
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
           },
           "created_by": {
             "type": "string"

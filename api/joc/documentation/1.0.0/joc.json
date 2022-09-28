@@ -575,10 +575,6 @@
           },
           "code_insertion_compta_dto": {
             "type": "string"
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
           }
         }
       },
@@ -637,10 +633,6 @@
           },
           "code_insertion_compta_dto": {
             "type": "string"
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
           },
           "created_by": {
             "type": "string"

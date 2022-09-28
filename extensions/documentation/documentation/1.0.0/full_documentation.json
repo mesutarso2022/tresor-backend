@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "09/23/2022 3:13:37 PM"
+    "x-generation-date": "09/28/2022 2:54:13 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -4457,10 +4457,6 @@
           },
           "libelle_nature_economique": {
             "type": "string"
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
           }
         }
       },
@@ -4597,10 +4593,6 @@
           },
           "libelle_nature_economique": {
             "type": "string"
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
           },
           "created_by": {
             "type": "string"
@@ -5024,10 +5016,10 @@
           "montant_od": {
             "type": "string"
           },
-          "numero_dossier": {
+          "devise": {
             "type": "string"
           },
-          "devise": {
+          "numero_dossier": {
             "type": "string"
           },
           "date_reception_ordonnancement_provisoire": {
@@ -5056,10 +5048,6 @@
           },
           "date_transfert_bcc": {
             "type": "string"
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
           }
         }
       },
@@ -5083,10 +5071,10 @@
           "montant_od": {
             "type": "string"
           },
-          "numero_dossier": {
+          "devise": {
             "type": "string"
           },
-          "devise": {
+          "numero_dossier": {
             "type": "string"
           },
           "date_reception_ordonnancement_provisoire": {
@@ -5115,10 +5103,6 @@
           },
           "date_transfert_bcc": {
             "type": "string"
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
           },
           "created_by": {
             "type": "string"
@@ -5189,10 +5173,6 @@
           },
           "code_insertion_compta_dto": {
             "type": "string"
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
           }
         }
       },
@@ -5251,10 +5231,6 @@
           },
           "code_insertion_compta_dto": {
             "type": "string"
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
           },
           "created_by": {
             "type": "string"
