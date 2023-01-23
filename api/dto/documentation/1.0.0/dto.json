@@ -540,10 +540,10 @@
           "montant_od": {
             "type": "string"
           },
-          "numero_dossier": {
+          "devise": {
             "type": "string"
           },
-          "devise": {
+          "numero_dossier": {
             "type": "string"
           },
           "date_reception_ordonnancement_provisoire": {
@@ -572,10 +572,6 @@
           },
           "date_transfert_bcc": {
             "type": "string"
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
           }
         }
       },
@@ -599,10 +595,10 @@
           "montant_od": {
             "type": "string"
           },
-          "numero_dossier": {
+          "devise": {
             "type": "string"
           },
-          "devise": {
+          "numero_dossier": {
             "type": "string"
           },
           "date_reception_ordonnancement_provisoire": {
@@ -631,10 +627,6 @@
           },
           "date_transfert_bcc": {
             "type": "string"
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
           },
           "created_by": {
             "type": "string"
