@@ -27,7 +27,7 @@
     {
       "method": "POST",
       "path": "/dtos",
-      "handler": "dto.createDto",
+      "handler": "dto.create",
       "config": {
         "policies": []
       }

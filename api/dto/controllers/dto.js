@@ -82,4 +82,28 @@ module.exports = {
       console.log("une erreur s'est produite", error.message);
     }
   },
+  create: async (ctx) => {
+    try {
+      const { body } = ctx.request;
+
+      const newDto = await strapi.services.dto.create(body);
+
+      if (!newDto)
+        return ctx.response.badRequest("dto not created on Mongo Database");
+
+      const createOnSqlServerDb = await strapi.services.dto.addDtoOnSqlServer(
+        body
+      );
+
+      if (!createOnSqlServerDb) {
+        await strapi.services.dto.delete({ id: newDto.id });
+
+        return ctx.response.badRequest("dto not create");
+      }
+
+      return { message: "dto created", dto: newDto };
+    } catch (error) {
+      return ctx.response.badImplementation("Something went wrong");
+    }
+  },
 };
