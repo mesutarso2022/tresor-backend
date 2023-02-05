@@ -6,5 +6,12 @@
  */
 
 module.exports = {
-  
+  addToDtoSqlServer: async (data) => {
+    try {
+      if (data) return true;
+      return false;
+    } catch (error) {
+      return false;
+    }
+  },
 };
