@@ -106,4 +106,77 @@ module.exports = {
       return ctx.response.badImplementation("Something went wrong");
     }
   },
+  update: async (ctx) => {
+    try {
+      const { body } = ctx.request;
+      const { id } = ctx.params;
+
+      const dtoFound = await strapi.services.dto.findOne({ id });
+
+      if (!dtoFound)
+        return ctx.response.notFound("dto with this id doesn't exist");
+
+      const dtoUpdated = await strapi.services.dto.update({ id }, body);
+
+      if (!dtoUpdated)
+        return ctx.response.badRequest("dto not updated on Monog Database");
+
+      const updateDtoOnSqlServerDB =
+        await strapi.services.dto.updateDtoOnSqlServer(body);
+
+      if (!updateDtoOnSqlServerDB) {
+        const {
+          numero_od,
+          numero_depense,
+          objet_depense,
+          libelle_type_beneficiaire,
+          date_validation_od,
+          montant_od,
+          devise,
+          numero_dossier,
+          date_reception_ordonnancement_provisoire,
+          numero_dto,
+          date_premier_depart_cabinet,
+          date_deuxieme_depart_cabinet,
+          date_premier_retour_cabinet,
+          date_deuxieme_retour_cabinet,
+          code_traitement,
+          numero_opi,
+          date_transfert_bcc,
+        } = dtoFound;
+
+        const dtoReUpdated = await strapi.services.dto.update(
+          { id },
+          {
+            numero_od,
+            numero_depense,
+            objet_depense,
+            libelle_type_beneficiaire,
+            date_validation_od,
+            montant_od,
+            devise,
+            numero_dossier,
+            date_reception_ordonnancement_provisoire,
+            numero_dto,
+            date_premier_depart_cabinet,
+            date_deuxieme_depart_cabinet,
+            date_premier_retour_cabinet,
+            date_deuxieme_retour_cabinet,
+            code_traitement,
+            numero_opi,
+            date_transfert_bcc,
+          }
+        );
+
+        return ctx.response.badRequest("dto not updated");
+      }
+
+      return {
+        message: "dto updated",
+        dto: dtoUpdated,
+      };
+    } catch (error) {
+      return ctx.response.badImplementation("Something went wrong");
+    }
+  },
 };
