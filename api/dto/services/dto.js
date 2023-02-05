@@ -6,7 +6,16 @@
  */
 
 module.exports = {
-  addToDtoSqlServer: async (data) => {
+  addDtoOnSqlServer: async (data) => {
+    try {
+      if (data) return true;
+      return false;
+    } catch (error) {
+      return false;
+    }
+  },
+
+  updateDtoOnSqlServer: async (data) => {
     try {
       if (data) return true;
       return false;
