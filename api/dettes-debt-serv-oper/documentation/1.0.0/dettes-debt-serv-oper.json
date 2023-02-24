@@ -1,0 +1,793 @@
+{
+  "paths": {
+    "/dettes-debt-serv-opers": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Dettes-debt-serv-oper"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "post": {
+        "deprecated": false,
+        "description": "Create a new record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Dettes-debt-serv-oper"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewDettes-debt-serv-oper"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/dettes-debt-serv-opers/count": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Dettes-debt-serv-oper"
+        ],
+        "parameters": []
+      }
+    },
+    "/dettes-debt-serv-opers/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Dettes-debt-serv-oper"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Dettes-debt-serv-oper"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewDettes-debt-serv-oper"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a record",
+        "responses": {
+          "200": {
+            "description": "deletes a single record based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Dettes-debt-serv-oper"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Dettes-debt-serv-oper": {
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "DSO_ID": {
+            "type": "string"
+          },
+          "LO_NO": {
+            "type": "string"
+          },
+          "TRA_NO": {
+            "type": "string"
+          },
+          "D_CRED_VAL": {
+            "type": "string"
+          },
+          "CG_TRNS_TYP": {
+            "type": "string"
+          },
+          "CD_TRNS_TYP": {
+            "type": "string"
+          },
+          "DSO_IDP": {
+            "type": "string"
+          },
+          "D_SCH": {
+            "type": "string"
+          },
+          "D_DBR_VAL": {
+            "type": "string"
+          },
+          "CU_EFF": {
+            "type": "string"
+          },
+          "AMT_CU_EFF": {
+            "type": "string"
+          },
+          "AMT_CU_LOCAL": {
+            "type": "string"
+          },
+          "AMT_CU_BASE": {
+            "type": "string"
+          },
+          "AMT_SCH": {
+            "type": "string"
+          },
+          "AMT_CU_SDR": {
+            "type": "string"
+          },
+          "AMT_CU_USD": {
+            "type": "string"
+          },
+          "AMT_CU_EUR": {
+            "type": "string"
+          },
+          "D_LOCAL_EXCH_RTE": {
+            "type": "string"
+          },
+          "CG_MEDIUM": {
+            "type": "string"
+          },
+          "CD_MEDIUM": {
+            "type": "string"
+          },
+          "CU_EXCH_POOL": {
+            "type": "string"
+          },
+          "REF": {
+            "type": "string"
+          },
+          "REMARKS": {
+            "type": "string"
+          },
+          "SDSP_ID": {
+            "type": "string"
+          },
+          "PMT_ORD_NO": {
+            "type": "string"
+          },
+          "BUP_ID": {
+            "type": "string"
+          },
+          "BAUP_ID": {
+            "type": "string"
+          },
+          "D_ENTRY": {
+            "type": "string"
+          },
+          "BLA_NO": {
+            "type": "string"
+          },
+          "POD_ID": {
+            "type": "string"
+          },
+          "AMT_CU_CA": {
+            "type": "string"
+          },
+          "AMT_CU_LO": {
+            "type": "string"
+          },
+          "CG_PAYMENT_STATUS": {
+            "type": "string"
+          },
+          "CD_PAYMENT_STATUS": {
+            "type": "string"
+          },
+          "D_CLOSING": {
+            "type": "string"
+          },
+          "REASON": {
+            "type": "string"
+          },
+          "CG_INPUT_FROM": {
+            "type": "string"
+          },
+          "CD_INPUT_FROM": {
+            "type": "string"
+          },
+          "CD_AMT_DIFF_ACTIONS": {
+            "type": "string"
+          },
+          "CG_AMT_DIFF_ACTIONS": {
+            "type": "string"
+          }
+        }
+      },
+      "NewDettes-debt-serv-oper": {
+        "properties": {
+          "DSO_ID": {
+            "type": "string"
+          },
+          "LO_NO": {
+            "type": "string"
+          },
+          "TRA_NO": {
+            "type": "string"
+          },
+          "D_CRED_VAL": {
+            "type": "string"
+          },
+          "CG_TRNS_TYP": {
+            "type": "string"
+          },
+          "CD_TRNS_TYP": {
+            "type": "string"
+          },
+          "DSO_IDP": {
+            "type": "string"
+          },
+          "D_SCH": {
+            "type": "string"
+          },
+          "D_DBR_VAL": {
+            "type": "string"
+          },
+          "CU_EFF": {
+            "type": "string"
+          },
+          "AMT_CU_EFF": {
+            "type": "string"
+          },
+          "AMT_CU_LOCAL": {
+            "type": "string"
+          },
+          "AMT_CU_BASE": {
+            "type": "string"
+          },
+          "AMT_SCH": {
+            "type": "string"
+          },
+          "AMT_CU_SDR": {
+            "type": "string"
+          },
+          "AMT_CU_USD": {
+            "type": "string"
+          },
+          "AMT_CU_EUR": {
+            "type": "string"
+          },
+          "D_LOCAL_EXCH_RTE": {
+            "type": "string"
+          },
+          "CG_MEDIUM": {
+            "type": "string"
+          },
+          "CD_MEDIUM": {
+            "type": "string"
+          },
+          "CU_EXCH_POOL": {
+            "type": "string"
+          },
+          "REF": {
+            "type": "string"
+          },
+          "REMARKS": {
+            "type": "string"
+          },
+          "SDSP_ID": {
+            "type": "string"
+          },
+          "PMT_ORD_NO": {
+            "type": "string"
+          },
+          "BUP_ID": {
+            "type": "string"
+          },
+          "BAUP_ID": {
+            "type": "string"
+          },
+          "D_ENTRY": {
+            "type": "string"
+          },
+          "BLA_NO": {
+            "type": "string"
+          },
+          "POD_ID": {
+            "type": "string"
+          },
+          "AMT_CU_CA": {
+            "type": "string"
+          },
+          "AMT_CU_LO": {
+            "type": "string"
+          },
+          "CG_PAYMENT_STATUS": {
+            "type": "string"
+          },
+          "CD_PAYMENT_STATUS": {
+            "type": "string"
+          },
+          "D_CLOSING": {
+            "type": "string"
+          },
+          "REASON": {
+            "type": "string"
+          },
+          "CG_INPUT_FROM": {
+            "type": "string"
+          },
+          "CD_INPUT_FROM": {
+            "type": "string"
+          },
+          "CD_AMT_DIFF_ACTIONS": {
+            "type": "string"
+          },
+          "CG_AMT_DIFF_ACTIONS": {
+            "type": "string"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "tags": []
+}

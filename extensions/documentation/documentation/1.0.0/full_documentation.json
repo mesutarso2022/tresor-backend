@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "09/28/2022 2:54:13 AM"
+    "x-generation-date": "02/24/2023 3:28:09 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -45,7 +45,7 @@
     }
   ],
   "paths": {
-    "/depenses": {
+    "/dettes-arrieres": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -55,9 +55,10 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Depense"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
                   }
                 }
               }
@@ -96,7 +97,7 @@
         },
         "summary": "",
         "tags": [
-          "Depense"
+          "Dettes-arriere"
         ],
         "parameters": [
           {
@@ -246,72 +247,9 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Depense"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Depense"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewDepense"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/depenses/count": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
                   "properties": {
-                    "count": {
-                      "type": "integer"
+                    "foo": {
+                      "type": "string"
                     }
                   }
                 }
@@ -351,12 +289,22 @@
         },
         "summary": "",
         "tags": [
-          "Depense"
+          "Dettes-arriere"
         ],
-        "parameters": []
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewDettes-arriere"
+              }
+            }
+          }
+        }
       }
     },
-    "/depenses/{id}": {
+    "/dettes-arrieres/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -366,7 +314,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Depense"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -404,7 +356,64 @@
         },
         "summary": "",
         "tags": [
-          "Depense"
+          "Dettes-arriere"
+        ],
+        "parameters": []
+      }
+    },
+    "/dettes-arrieres/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Dettes-arriere"
         ],
         "parameters": [
           {
@@ -428,7 +437,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Depense"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -466,7 +479,7 @@
         },
         "summary": "",
         "tags": [
-          "Depense"
+          "Dettes-arriere"
         ],
         "requestBody": {
           "description": "",
@@ -474,7 +487,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewDepense"
+                "$ref": "#/components/schemas/NewDettes-arriere"
               }
             }
           }
@@ -540,7 +553,7 @@
         },
         "summary": "",
         "tags": [
-          "Depense"
+          "Dettes-arriere"
         ],
         "parameters": [
           {
@@ -556,7 +569,7 @@
         ]
       }
     },
-    "/dotations": {
+    "/dettes-debt-serv-opers": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -566,9 +579,10 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Dotation"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
                   }
                 }
               }
@@ -607,7 +621,7 @@
         },
         "summary": "",
         "tags": [
-          "Dotation"
+          "Dettes-debt-serv-oper"
         ],
         "parameters": [
           {
@@ -757,72 +771,9 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Dotation"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Dotation"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewDotation"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/dotations/count": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
                   "properties": {
-                    "count": {
-                      "type": "integer"
+                    "foo": {
+                      "type": "string"
                     }
                   }
                 }
@@ -862,12 +813,22 @@
         },
         "summary": "",
         "tags": [
-          "Dotation"
+          "Dettes-debt-serv-oper"
         ],
-        "parameters": []
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewDettes-debt-serv-oper"
+              }
+            }
+          }
+        }
       }
     },
-    "/dotations/{id}": {
+    "/dettes-debt-serv-opers/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -877,7 +838,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Dotation"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -915,7 +880,64 @@
         },
         "summary": "",
         "tags": [
-          "Dotation"
+          "Dettes-debt-serv-oper"
+        ],
+        "parameters": []
+      }
+    },
+    "/dettes-debt-serv-opers/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Dettes-debt-serv-oper"
         ],
         "parameters": [
           {
@@ -939,7 +961,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Dotation"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -977,7 +1003,7 @@
         },
         "summary": "",
         "tags": [
-          "Dotation"
+          "Dettes-debt-serv-oper"
         ],
         "requestBody": {
           "description": "",
@@ -985,7 +1011,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewDotation"
+                "$ref": "#/components/schemas/NewDettes-debt-serv-oper"
               }
             }
           }
@@ -1051,7 +1077,1055 @@
         },
         "summary": "",
         "tags": [
-          "Dotation"
+          "Dettes-debt-serv-oper"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/dettes-sch-dsbs": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Dettes-sch-dsb"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "post": {
+        "deprecated": false,
+        "description": "Create a new record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Dettes-sch-dsb"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewDettes-sch-dsb"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/dettes-sch-dsbs/count": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Dettes-sch-dsb"
+        ],
+        "parameters": []
+      }
+    },
+    "/dettes-sch-dsbs/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Dettes-sch-dsb"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Dettes-sch-dsb"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewDettes-sch-dsb"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a record",
+        "responses": {
+          "200": {
+            "description": "deletes a single record based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Dettes-sch-dsb"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/dettes-total-calc-rules": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Dettes-total-calc-rule"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "post": {
+        "deprecated": false,
+        "description": "Create a new record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Dettes-total-calc-rule"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewDettes-total-calc-rule"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/dettes-total-calc-rules/count": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Dettes-total-calc-rule"
+        ],
+        "parameters": []
+      }
+    },
+    "/dettes-total-calc-rules/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Dettes-total-calc-rule"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Dettes-total-calc-rule"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewDettes-total-calc-rule"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a record",
+        "responses": {
+          "200": {
+            "description": "deletes a single record based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Dettes-total-calc-rule"
         ],
         "parameters": [
           {
@@ -1563,517 +2637,6 @@
         "summary": "",
         "tags": [
           "Dto"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      }
-    },
-    "/jocs": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Joc"
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Joc"
-        ],
-        "parameters": [
-          {
-            "name": "_limit",
-            "in": "query",
-            "required": false,
-            "description": "Maximum number of results possible",
-            "schema": {
-              "type": "integer"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_sort",
-            "in": "query",
-            "required": false,
-            "description": "Sort according to a specific field.",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_start",
-            "in": "query",
-            "required": false,
-            "description": "Skip a specific number of entries (especially useful for pagination)",
-            "schema": {
-              "type": "integer"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "=",
-            "in": "query",
-            "required": false,
-            "description": "Get entries that matches exactly your input",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_ne",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are not equals to something",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_lt",
-            "in": "query",
-            "required": false,
-            "description": "Get record that are lower than a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_lte",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are lower than or equal to a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_gt",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are greater than a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_gte",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are greater than  or equal a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_contains",
-            "in": "query",
-            "required": false,
-            "description": "Get records that contains a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_containss",
-            "in": "query",
-            "required": false,
-            "description": "Get records that contains (case sensitive) a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_in",
-            "in": "query",
-            "required": false,
-            "description": "Get records that matches any value in the array of values",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_nin",
-            "in": "query",
-            "required": false,
-            "description": "Get records that doesn't match any value in the array of values",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "deprecated": false
-          }
-        ]
-      },
-      "post": {
-        "deprecated": false,
-        "description": "Create a new record",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Joc"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Joc"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewJoc"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/jocs/count": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "count": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Joc"
-        ],
-        "parameters": []
-      }
-    },
-    "/jocs/{id}": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Joc"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Joc"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      },
-      "put": {
-        "deprecated": false,
-        "description": "Update a record",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Joc"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Joc"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewJoc"
-              }
-            }
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      },
-      "delete": {
-        "deprecated": false,
-        "description": "Delete a record",
-        "responses": {
-          "200": {
-            "description": "deletes a single record based on the ID supplied",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "integer",
-                  "format": "int64"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Joc"
         ],
         "parameters": [
           {
@@ -4318,7 +4881,7 @@
   },
   "components": {
     "schemas": {
-      "Depense": {
+      "Dettes-arriere": {
         "required": [
           "id"
         ],
@@ -4326,272 +4889,76 @@
           "id": {
             "type": "string"
           },
-          "numero_dotation": {
+          "D_SCH": {
+            "type": "string",
+            "format": "date"
+          },
+          "LO_NO": {
             "type": "string"
           },
-          "numero_dossier": {
+          "TRA_NO": {
             "type": "string"
           },
-          "date_dossier": {
+          "NAME": {
             "type": "string"
           },
-          "numero_bde": {
+          "AMT_CU_USD": {
             "type": "string"
           },
-          "montant_prevu": {
+          "CD_DEBT_SOURCE": {
             "type": "string"
           },
-          "taux_devise": {
+          "TYPE_DETTE": {
             "type": "string"
           },
-          "nom_devise": {
+          "CG_DEBT_SOURCE": {
             "type": "string"
           },
-          "sigle_devise": {
+          "CATEGORIE": {
             "type": "string"
           },
-          "montant_dossier_fc": {
+          "PA_ID": {
             "type": "string"
           },
-          "acte_generateur": {
-            "type": "string"
-          },
-          "numero_depense": {
-            "type": "string"
-          },
-          "date_saisie_depense": {
-            "type": "string"
-          },
-          "numero_dotation_depense": {
-            "type": "string"
-          },
-          "objet_depense": {
-            "type": "string"
-          },
-          "montant_prevu_depense": {
-            "type": "string"
-          },
-          "montant_depense_fc": {
-            "type": "string"
-          },
-          "montant_cumul_paye": {
-            "type": "string"
-          },
-          "nom_beneficiaire": {
-            "type": "string"
-          },
-          "numero_liquidation": {
-            "type": "string"
-          },
-          "date_validation_liquidation": {
-            "type": "string"
-          },
-          "montant_liquidation": {
-            "type": "string"
-          },
-          "montant_liquidation_fc": {
-            "type": "string"
-          },
-          "numero_od": {
-            "type": "string"
-          },
-          "date_visa_ministre": {
-            "type": "string"
-          },
-          "date_validation_od": {
-            "type": "string"
-          },
-          "montant_od": {
-            "type": "string"
-          },
-          "montant_od_fc": {
-            "type": "string"
-          },
-          "numero_paiement": {
-            "type": "string"
-          },
-          "montant_paiement": {
-            "type": "string"
-          },
-          "montant_paiement_fc": {
-            "type": "string"
-          },
-          "libelle_etat_paiement": {
-            "type": "string"
-          },
-          "date_transfert_bcc": {
-            "type": "string"
-          },
-          "date_accuse_bcc": {
-            "type": "string"
-          },
-          "code_dotation": {
-            "type": "string"
-          },
-          "libelle_dotation": {
-            "type": "string"
-          },
-          "exercice_dotation": {
-            "type": "string"
-          },
-          "montant_dotation": {
-            "type": "string"
-          },
-          "montant_engage": {
-            "type": "string"
-          },
-          "montant_liquide": {
-            "type": "string"
-          },
-          "montant_ordonnance": {
-            "type": "string"
-          },
-          "montant_paye": {
-            "type": "string"
-          },
-          "nom_chapitre": {
-            "type": "string"
-          },
-          "nom_section": {
-            "type": "string"
-          },
-          "libelle_nature_economique": {
+          "NOM_CREANCIER": {
             "type": "string"
           }
         }
       },
-      "NewDepense": {
+      "NewDettes-arriere": {
         "properties": {
-          "numero_dotation": {
+          "D_SCH": {
+            "type": "string",
+            "format": "date"
+          },
+          "LO_NO": {
             "type": "string"
           },
-          "numero_dossier": {
+          "TRA_NO": {
             "type": "string"
           },
-          "date_dossier": {
+          "NAME": {
             "type": "string"
           },
-          "numero_bde": {
+          "AMT_CU_USD": {
             "type": "string"
           },
-          "montant_prevu": {
+          "CD_DEBT_SOURCE": {
             "type": "string"
           },
-          "taux_devise": {
+          "TYPE_DETTE": {
             "type": "string"
           },
-          "nom_devise": {
+          "CG_DEBT_SOURCE": {
             "type": "string"
           },
-          "sigle_devise": {
+          "CATEGORIE": {
             "type": "string"
           },
-          "montant_dossier_fc": {
+          "PA_ID": {
             "type": "string"
           },
-          "acte_generateur": {
-            "type": "string"
-          },
-          "numero_depense": {
-            "type": "string"
-          },
-          "date_saisie_depense": {
-            "type": "string"
-          },
-          "numero_dotation_depense": {
-            "type": "string"
-          },
-          "objet_depense": {
-            "type": "string"
-          },
-          "montant_prevu_depense": {
-            "type": "string"
-          },
-          "montant_depense_fc": {
-            "type": "string"
-          },
-          "montant_cumul_paye": {
-            "type": "string"
-          },
-          "nom_beneficiaire": {
-            "type": "string"
-          },
-          "numero_liquidation": {
-            "type": "string"
-          },
-          "date_validation_liquidation": {
-            "type": "string"
-          },
-          "montant_liquidation": {
-            "type": "string"
-          },
-          "montant_liquidation_fc": {
-            "type": "string"
-          },
-          "numero_od": {
-            "type": "string"
-          },
-          "date_visa_ministre": {
-            "type": "string"
-          },
-          "date_validation_od": {
-            "type": "string"
-          },
-          "montant_od": {
-            "type": "string"
-          },
-          "montant_od_fc": {
-            "type": "string"
-          },
-          "numero_paiement": {
-            "type": "string"
-          },
-          "montant_paiement": {
-            "type": "string"
-          },
-          "montant_paiement_fc": {
-            "type": "string"
-          },
-          "libelle_etat_paiement": {
-            "type": "string"
-          },
-          "date_transfert_bcc": {
-            "type": "string"
-          },
-          "date_accuse_bcc": {
-            "type": "string"
-          },
-          "code_dotation": {
-            "type": "string"
-          },
-          "libelle_dotation": {
-            "type": "string"
-          },
-          "exercice_dotation": {
-            "type": "string"
-          },
-          "montant_dotation": {
-            "type": "string"
-          },
-          "montant_engage": {
-            "type": "string"
-          },
-          "montant_liquide": {
-            "type": "string"
-          },
-          "montant_ordonnance": {
-            "type": "string"
-          },
-          "montant_paye": {
-            "type": "string"
-          },
-          "nom_chapitre": {
-            "type": "string"
-          },
-          "nom_section": {
-            "type": "string"
-          },
-          "libelle_nature_economique": {
+          "NOM_CREANCIER": {
             "type": "string"
           },
           "created_by": {
@@ -4602,7 +4969,7 @@
           }
         }
       },
-      "Dotation": {
+      "Dettes-debt-serv-oper": {
         "required": [
           "id"
         ],
@@ -4610,377 +4977,415 @@
           "id": {
             "type": "string"
           },
-          "numero_dotation": {
+          "DSO_ID": {
             "type": "string"
           },
-          "code_dotation": {
+          "LO_NO": {
             "type": "string"
           },
-          "libelle_dotation": {
+          "TRA_NO": {
             "type": "string"
           },
-          "exercice": {
+          "D_CRED_VAL": {
             "type": "string"
           },
-          "sous_fonction": {
+          "CG_TRNS_TYP": {
             "type": "string"
           },
-          "chapitre": {
+          "CD_TRNS_TYP": {
             "type": "string"
           },
-          "Nature": {
+          "DSO_IDP": {
             "type": "string"
           },
-          "numero_projet": {
+          "D_SCH": {
             "type": "string"
           },
-          "montant_vote": {
+          "D_DBR_VAL": {
             "type": "string"
           },
-          "montant_dotation": {
+          "CU_EFF": {
             "type": "string"
           },
-          "montant_engage": {
+          "AMT_CU_EFF": {
             "type": "string"
           },
-          "montant_liquide": {
+          "AMT_CU_LOCAL": {
             "type": "string"
           },
-          "montant_ordonnance": {
+          "AMT_CU_BASE": {
             "type": "string"
           },
-          "montant_paye": {
+          "AMT_SCH": {
             "type": "string"
           },
-          "montant_debite": {
+          "AMT_CU_SDR": {
             "type": "string"
           },
-          "montant_reservation": {
+          "AMT_CU_USD": {
             "type": "string"
           },
-          "etat_virement": {
+          "AMT_CU_EUR": {
             "type": "string"
           },
-          "max_trimestre_1": {
+          "D_LOCAL_EXCH_RTE": {
             "type": "string"
           },
-          "max_trimestre_2": {
+          "CG_MEDIUM": {
             "type": "string"
           },
-          "max_trimestre_3": {
+          "CD_MEDIUM": {
             "type": "string"
           },
-          "max_trimestre_4": {
+          "CU_EXCH_POOL": {
             "type": "string"
           },
-          "cumul_trimestre_1": {
+          "REF": {
             "type": "string"
           },
-          "cumul_trimestre_2": {
+          "REMARKS": {
             "type": "string"
           },
-          "cumul_trimestre_3": {
+          "SDSP_ID": {
             "type": "string"
           },
-          "cumul_trimestre_4": {
+          "PMT_ORD_NO": {
             "type": "string"
           },
-          "effectif": {
+          "BUP_ID": {
             "type": "string"
           },
-          "financement": {
+          "BAUP_ID": {
             "type": "string"
           },
-          "specificite": {
+          "D_ENTRY": {
             "type": "string"
           },
-          "localisation": {
+          "BLA_NO": {
             "type": "string"
           },
-          "nom_chapitre": {
+          "POD_ID": {
             "type": "string"
           },
-          "code_section": {
+          "AMT_CU_CA": {
             "type": "string"
           },
-          "nom_section": {
+          "AMT_CU_LO": {
             "type": "string"
           },
-          "nom_ministere": {
+          "CG_PAYMENT_STATUS": {
             "type": "string"
           },
-          "libelle_article": {
+          "CD_PAYMENT_STATUS": {
             "type": "string"
           },
-          "code_ministere": {
+          "D_CLOSING": {
             "type": "string"
           },
-          "libelle_localisation": {
+          "REASON": {
             "type": "string"
           },
-          "code_territoire_ville": {
+          "CG_INPUT_FROM": {
             "type": "string"
           },
-          "libelle_territoire_ville": {
+          "CD_INPUT_FROM": {
             "type": "string"
           },
-          "libelle_source_financement": {
+          "CD_AMT_DIFF_ACTIONS": {
             "type": "string"
           },
-          "code_titre": {
+          "CG_AMT_DIFF_ACTIONS": {
             "type": "string"
-          },
-          "libelle_titre": {
-            "type": "string"
-          },
-          "libelle_sous_fonction": {
-            "type": "string"
-          },
-          "code_pag": {
-            "type": "string"
-          },
-          "code_grande_fonction": {
-            "type": "string"
-          },
-          "libelle_grande_fonction": {
-            "type": "string"
-          },
-          "libelle_specificite": {
-            "type": "string"
-          },
-          "code_province": {
-            "type": "string"
-          },
-          "nom_province": {
-            "type": "string"
-          },
-          "code_article": {
-            "type": "string"
-          },
-          "code_nature": {
-            "type": "string"
-          },
-          "libelle_nature": {
-            "type": "string"
-          },
-          "programme": {
-            "type": "string"
-          },
-          "action": {
-            "type": "string"
-          },
-          "nom_fonction": {
-            "type": "string"
-          },
-          "code_fonction": {
-            "type": "string"
-          },
-          "code_forme_budget": {
-            "type": "string"
-          },
-          "sous_nature": {
-            "type": "string"
-          },
-          "libelle_sous_nature": {
-            "type": "string"
-          },
-          "code_projet": {
-            "type": "string"
-          },
-          "nom_projet": {
-            "type": "string"
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
           }
         }
       },
-      "NewDotation": {
+      "NewDettes-debt-serv-oper": {
         "properties": {
-          "numero_dotation": {
+          "DSO_ID": {
             "type": "string"
           },
-          "code_dotation": {
+          "LO_NO": {
             "type": "string"
           },
-          "libelle_dotation": {
+          "TRA_NO": {
             "type": "string"
           },
-          "exercice": {
+          "D_CRED_VAL": {
             "type": "string"
           },
-          "sous_fonction": {
+          "CG_TRNS_TYP": {
             "type": "string"
           },
-          "chapitre": {
+          "CD_TRNS_TYP": {
             "type": "string"
           },
-          "Nature": {
+          "DSO_IDP": {
             "type": "string"
           },
-          "numero_projet": {
+          "D_SCH": {
             "type": "string"
           },
-          "montant_vote": {
+          "D_DBR_VAL": {
             "type": "string"
           },
-          "montant_dotation": {
+          "CU_EFF": {
             "type": "string"
           },
-          "montant_engage": {
+          "AMT_CU_EFF": {
             "type": "string"
           },
-          "montant_liquide": {
+          "AMT_CU_LOCAL": {
             "type": "string"
           },
-          "montant_ordonnance": {
+          "AMT_CU_BASE": {
             "type": "string"
           },
-          "montant_paye": {
+          "AMT_SCH": {
             "type": "string"
           },
-          "montant_debite": {
+          "AMT_CU_SDR": {
             "type": "string"
           },
-          "montant_reservation": {
+          "AMT_CU_USD": {
             "type": "string"
           },
-          "etat_virement": {
+          "AMT_CU_EUR": {
             "type": "string"
           },
-          "max_trimestre_1": {
+          "D_LOCAL_EXCH_RTE": {
             "type": "string"
           },
-          "max_trimestre_2": {
+          "CG_MEDIUM": {
             "type": "string"
           },
-          "max_trimestre_3": {
+          "CD_MEDIUM": {
             "type": "string"
           },
-          "max_trimestre_4": {
+          "CU_EXCH_POOL": {
             "type": "string"
           },
-          "cumul_trimestre_1": {
+          "REF": {
             "type": "string"
           },
-          "cumul_trimestre_2": {
+          "REMARKS": {
             "type": "string"
           },
-          "cumul_trimestre_3": {
+          "SDSP_ID": {
             "type": "string"
           },
-          "cumul_trimestre_4": {
+          "PMT_ORD_NO": {
             "type": "string"
           },
-          "effectif": {
+          "BUP_ID": {
             "type": "string"
           },
-          "financement": {
+          "BAUP_ID": {
             "type": "string"
           },
-          "specificite": {
+          "D_ENTRY": {
             "type": "string"
           },
-          "localisation": {
+          "BLA_NO": {
             "type": "string"
           },
-          "nom_chapitre": {
+          "POD_ID": {
             "type": "string"
           },
-          "code_section": {
+          "AMT_CU_CA": {
             "type": "string"
           },
-          "nom_section": {
+          "AMT_CU_LO": {
             "type": "string"
           },
-          "nom_ministere": {
+          "CG_PAYMENT_STATUS": {
             "type": "string"
           },
-          "libelle_article": {
+          "CD_PAYMENT_STATUS": {
             "type": "string"
           },
-          "code_ministere": {
+          "D_CLOSING": {
             "type": "string"
           },
-          "libelle_localisation": {
+          "REASON": {
             "type": "string"
           },
-          "code_territoire_ville": {
+          "CG_INPUT_FROM": {
             "type": "string"
           },
-          "libelle_territoire_ville": {
+          "CD_INPUT_FROM": {
             "type": "string"
           },
-          "libelle_source_financement": {
+          "CD_AMT_DIFF_ACTIONS": {
             "type": "string"
           },
-          "code_titre": {
+          "CG_AMT_DIFF_ACTIONS": {
             "type": "string"
           },
-          "libelle_titre": {
+          "created_by": {
             "type": "string"
           },
-          "libelle_sous_fonction": {
+          "updated_by": {
+            "type": "string"
+          }
+        }
+      },
+      "Dettes-sch-dsb": {
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
             "type": "string"
           },
-          "code_pag": {
+          "SD_ID": {
             "type": "string"
           },
-          "code_grande_fonction": {
+          "LO_NO": {
             "type": "string"
           },
-          "libelle_grande_fonction": {
+          "TRA_NO": {
             "type": "string"
           },
-          "libelle_specificite": {
+          "CG_TRNS_TYP": {
             "type": "string"
           },
-          "code_province": {
+          "CD_TRNS_TYP": {
             "type": "string"
           },
-          "nom_province": {
+          "D_SCH": {
             "type": "string"
           },
-          "code_article": {
+          "SD_IDP": {
             "type": "string"
           },
-          "code_nature": {
+          "AMT": {
             "type": "string"
           },
-          "libelle_nature": {
+          "AMT_DISCOUNT": {
             "type": "string"
           },
-          "programme": {
+          "PCENT_DISCOUNT": {
             "type": "string"
           },
-          "action": {
+          "CG_DISCOUNT_YN": {
             "type": "string"
           },
-          "nom_fonction": {
+          "CD_DISCOUNT_YN": {
             "type": "string"
           },
-          "code_fonction": {
+          "SSY_ID": {
+            "type": "string"
+          }
+        }
+      },
+      "NewDettes-sch-dsb": {
+        "properties": {
+          "SD_ID": {
             "type": "string"
           },
-          "code_forme_budget": {
+          "LO_NO": {
             "type": "string"
           },
-          "sous_nature": {
+          "TRA_NO": {
             "type": "string"
           },
-          "libelle_sous_nature": {
+          "CG_TRNS_TYP": {
             "type": "string"
           },
-          "code_projet": {
+          "CD_TRNS_TYP": {
             "type": "string"
           },
-          "nom_projet": {
+          "D_SCH": {
             "type": "string"
           },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
+          "SD_IDP": {
+            "type": "string"
+          },
+          "AMT": {
+            "type": "string"
+          },
+          "AMT_DISCOUNT": {
+            "type": "string"
+          },
+          "PCENT_DISCOUNT": {
+            "type": "string"
+          },
+          "CG_DISCOUNT_YN": {
+            "type": "string"
+          },
+          "CD_DISCOUNT_YN": {
+            "type": "string"
+          },
+          "SSY_ID": {
+            "type": "string"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
+          }
+        }
+      },
+      "Dettes-total-calc-rule": {
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "TOTAL_NO": {
+            "type": "string"
+          },
+          "CG_TRNS_TYP": {
+            "type": "string"
+          },
+          "CD_TRNS_TYP": {
+            "type": "string"
+          },
+          "TABLE_ID_SOURCE": {
+            "type": "string"
+          },
+          "CD_OPERATOR": {
+            "type": "string"
+          },
+          "CG_OPERATOR": {
+            "type": "string"
+          },
+          "CG_MEDIUM": {
+            "type": "string"
+          },
+          "CD_MEDIUM": {
+            "type": "string"
+          }
+        }
+      },
+      "NewDettes-total-calc-rule": {
+        "properties": {
+          "TOTAL_NO": {
+            "type": "string"
+          },
+          "CG_TRNS_TYP": {
+            "type": "string"
+          },
+          "CD_TRNS_TYP": {
+            "type": "string"
+          },
+          "TABLE_ID_SOURCE": {
+            "type": "string"
+          },
+          "CD_OPERATOR": {
+            "type": "string"
+          },
+          "CG_OPERATOR": {
+            "type": "string"
+          },
+          "CG_MEDIUM": {
+            "type": "string"
+          },
+          "CD_MEDIUM": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"
@@ -5102,134 +5507,6 @@
             "type": "string"
           },
           "date_transfert_bcc": {
-            "type": "string"
-          },
-          "created_by": {
-            "type": "string"
-          },
-          "updated_by": {
-            "type": "string"
-          }
-        }
-      },
-      "Joc": {
-        "required": [
-          "id"
-        ],
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "numero_joc": {
-            "type": "string"
-          },
-          "lieu_op": {
-            "type": "string"
-          },
-          "numero_compte": {
-            "type": "string"
-          },
-          "date_op": {
-            "type": "string"
-          },
-          "nature_op": {
-            "type": "string"
-          },
-          "libelle_op": {
-            "type": "string"
-          },
-          "nom_beneficiaire": {
-            "type": "string"
-          },
-          "reference_document": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "motif": {
-            "type": "string"
-          },
-          "montant_debit": {
-            "type": "string"
-          },
-          "montant_credit": {
-            "type": "string"
-          },
-          "date_integration_dto": {
-            "type": "string"
-          },
-          "date_journee_joc": {
-            "type": "string"
-          },
-          "integrateur_joc": {
-            "type": "string"
-          },
-          "date_integration_routine": {
-            "type": "string"
-          },
-          "statut_integration_dto": {
-            "type": "string"
-          },
-          "code_insertion_compta_dto": {
-            "type": "string"
-          }
-        }
-      },
-      "NewJoc": {
-        "properties": {
-          "numero_joc": {
-            "type": "string"
-          },
-          "lieu_op": {
-            "type": "string"
-          },
-          "numero_compte": {
-            "type": "string"
-          },
-          "date_op": {
-            "type": "string"
-          },
-          "nature_op": {
-            "type": "string"
-          },
-          "libelle_op": {
-            "type": "string"
-          },
-          "nom_beneficiaire": {
-            "type": "string"
-          },
-          "reference_document": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "motif": {
-            "type": "string"
-          },
-          "montant_debit": {
-            "type": "string"
-          },
-          "montant_credit": {
-            "type": "string"
-          },
-          "date_integration_dto": {
-            "type": "string"
-          },
-          "date_journee_joc": {
-            "type": "string"
-          },
-          "integrateur_joc": {
-            "type": "string"
-          },
-          "date_integration_routine": {
-            "type": "string"
-          },
-          "statut_integration_dto": {
-            "type": "string"
-          },
-          "code_insertion_compta_dto": {
             "type": "string"
           },
           "created_by": {
@@ -5527,16 +5804,7 @@
   },
   "tags": [
     {
-      "name": "Depense"
-    },
-    {
-      "name": "Dotation"
-    },
-    {
       "name": "Dto"
-    },
-    {
-      "name": "Joc"
     },
     {
       "name": "Email - Email"

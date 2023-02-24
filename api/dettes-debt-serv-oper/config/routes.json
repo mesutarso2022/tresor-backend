@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/dettes-debt-serv-opers",
+      "handler": "dettes-debt-serv-oper.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/dettes-debt-serv-opers/count",
+      "handler": "dettes-debt-serv-oper.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/dettes-debt-serv-opers/:id",
+      "handler": "dettes-debt-serv-oper.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/dettes-debt-serv-opers",
+      "handler": "dettes-debt-serv-oper.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/dettes-debt-serv-opers/:id",
+      "handler": "dettes-debt-serv-oper.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/dettes-debt-serv-opers/:id",
+      "handler": "dettes-debt-serv-oper.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

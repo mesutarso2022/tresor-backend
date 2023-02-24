@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/dettes-arrieres",
+      "handler": "dettes-arriere.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/dettes-arrieres/count",
+      "handler": "dettes-arriere.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/dettes-arrieres/:id",
+      "handler": "dettes-arriere.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/dettes-arrieres",
+      "handler": "dettes-arriere.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/dettes-arrieres/:id",
+      "handler": "dettes-arriere.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/dettes-arrieres/:id",
+      "handler": "dettes-arriere.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/dettes-sch-dsbs",
+      "handler": "dettes-sch-dsb.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/dettes-sch-dsbs/count",
+      "handler": "dettes-sch-dsb.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/dettes-sch-dsbs/:id",
+      "handler": "dettes-sch-dsb.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/dettes-sch-dsbs",
+      "handler": "dettes-sch-dsb.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/dettes-sch-dsbs/:id",
+      "handler": "dettes-sch-dsb.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/dettes-sch-dsbs/:id",
+      "handler": "dettes-sch-dsb.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
