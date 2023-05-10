@@ -1,5 +1,5 @@
 // DO NOT MODIFY THESE OPTIONS
-import Logo from './assets/images/logo.png'
+import Logo from './assets/images/logo_strapi.png'
 
 // NOTE TO PLUGINS DEVELOPERS:
 // If you modify this file you also need to update the documentation accordingly

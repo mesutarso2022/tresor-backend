@@ -21,7 +21,7 @@
   },
   "plugins": {
     "id": "app.components.LeftMenuLinkContainer.plugins",
-    "defaultMessage": "Plugins"
+    "defaultMessage": "extensions"
   },
   "general": {
     "id": "app.components.LeftMenuLinkContainer.general",
