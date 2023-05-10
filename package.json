@@ -2,7 +2,7 @@
   "name": "tresorerie",
   "private": true,
   "version": "0.1.0",
-  "description": "A Strapi application",
+  "description": "DTO application",
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
@@ -29,7 +29,7 @@
     "strapi-utils": "3.6.11"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "Mechack Tambwe"
   },
   "strapi": {
     "uuid": "eedf15a7-b440-4323-8566-5fdab8d48511"
