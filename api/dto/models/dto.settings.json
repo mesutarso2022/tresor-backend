@@ -12,56 +12,56 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "numero_od": {
-      "type": "string"
-    },
-    "numero_depense": {
-      "type": "string"
-    },
     "objet_depense": {
       "type": "string"
     },
     "libelle_type_beneficiaire": {
       "type": "string"
     },
-    "date_validation_od": {
-      "type": "string"
-    },
-    "montant_od": {
-      "type": "string"
-    },
     "devise": {
-      "type": "string"
-    },
-    "numero_dossier": {
-      "type": "string"
-    },
-    "date_reception_ordonnancement_provisoire": {
       "type": "string"
     },
     "numero_dto": {
       "type": "string"
     },
-    "date_premier_depart_cabinet": {
-      "type": "string"
-    },
-    "date_deuxieme_depart_cabinet": {
-      "type": "string"
-    },
-    "date_premier_retour_cabinet": {
-      "type": "string"
-    },
-    "date_deuxieme_retour_cabinet": {
-      "type": "string"
-    },
     "code_traitement": {
       "type": "string"
     },
-    "numero_opi": {
-      "type": "string"
+    "montant_od": {
+      "type": "float"
+    },
+    "date_validation_od": {
+      "type": "date"
+    },
+    "date_reception_ordonnancement_provisoire": {
+      "type": "date"
+    },
+    "date_premier_depart_cabinet": {
+      "type": "date"
+    },
+    "date_deuxieme_depart_cabinet": {
+      "type": "date"
+    },
+    "date_premier_retour_cabinet": {
+      "type": "date"
+    },
+    "date_deuxieme_retour_cabinet": {
+      "type": "date"
     },
     "date_transfert_bcc": {
-      "type": "string"
+      "type": "date"
+    },
+    "numero_od": {
+      "type": "biginteger"
+    },
+    "numero_depense": {
+      "type": "biginteger"
+    },
+    "numero_dossier": {
+      "type": "biginteger"
+    },
+    "numero_opi": {
+      "type": "biginteger"
     }
   }
 }
